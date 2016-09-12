@@ -12,17 +12,34 @@
             min-height: 100%;
         }
         body {
-            background-image: url("amolhb.jpg");
+            background-image: url("amol0.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
     </style>
 
+    <script>
+    var i = 0;
+
+    function seize() {
+        setInterval(change, 800);
+    }
+
+    function change() {
+        i = (i + 1) % 9;
+        document.body.style.backgroundImage = "url('amol" + i + ".jpg')";
+    }
+    </script>
+
 </head>
 
-<body>
 
-<!-- <img src="amol.jpg" width="1000" height="1000"> -->
+
+<body onload="seize()">
+
 
 </body>
+
+
+
